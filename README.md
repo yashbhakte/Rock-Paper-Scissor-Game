@@ -22,3 +22,4 @@ This is a simple **Rock, Paper, Scissors** game where users can play against the
 - **JavaScript (ES6)**: Game logic and interaction handling.
 
 
+![Rock,Paper Scissor Game Screenshot](https://github.com/user-attachments/assets/82b61b4a-528d-4f9c-8f6d-085276e6d528)
