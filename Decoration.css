@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+
+body {
+    background: url(Background\ Image.jpeg) center center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  overflow-x: clip;
+}
+
+
+
+h1{ 
+  grid-column: span 2 ;
+    text-align: center;
+    text-decoration: underline;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+
+
+h2 {
+  font-weight: 100;
+  font-size: 48px;
+  text-align: center;
+}
+
+
+
+.choices, .computer {
+  margin: 10px;
+  display: grid;
+  justify-content: center;
+  gap: 48px  ;
+}
+
+
+
+.btns {
+  position: relative;
+  border-radius: 100vmax;
+  border: 1px solid #00000060;
+  width: 224px;
+  aspect-ratio: 1;
+}
+
+
+
+.choices button {
+  position: absolute;
+  offset-path: border-box;
+  font-size: 64px;
+  margin: 5px;
+  border: none;
+  background: #b0b7af;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  aspect-ratio: -1;
+  border: 1px solid #1f202030;
+  border-radius: 100vmax;
+  offset-rotate: 0deg;
+}
+
+
+
+#rock {
+  offset-distance: 0%;
+}
+
+
+
+#paper {
+  offset-distance: calc(60 / 180 * 100%);
+}
+
+
+
+#scissors {
+  offset-distance: calc(120 / 180 * 100%);
+}
+
+
+
+.choices button:hover {
+  transform: scale(1.2);
+}
+
+
+
+#result {
+  font-size: 20px;
+  margin-top: 32px;
+  min-height: 48px;
+  text-align: center;
+  grid-column: span 2;
+}
+
+
+
+#animation {
+  font-size: 80px;
+  border: 1px solid #1f202030;
+  border-radius: 100vmax;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  background-image: repeating-conic-gradient(
+    #E1F8DC 0deg 10deg,
+    #0000 10deg 20deg
+  );
+  transition: background-color 0.5s ease;
+}
+
+
+
+@keyframes fireworks {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle, 
+    rgba(255,255,255,1) 0%, 
+    rgba(255,0,0,1) 40%, 
+    rgba(255,255,0,1) 60%, 
+    rgba(255,255,255,0) 100%
+  );
+  animation: fireworks 1s ease-out forwards;
+}
+
+
+
+#fireworks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
